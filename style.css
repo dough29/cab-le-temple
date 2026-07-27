@@ -29,6 +29,25 @@ header h1 {
     font-size: 1.2rem;
 }
 
+.rdv {
+    padding: 2rem 0;
+    border-top: 1px solid #eee;
+}
+
+.rdv a {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: #107ACA;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.rdv a:hover {
+    background: #0b5ea0;
+}
+
 .contact {
     padding: 2rem 0;
     border-top: 1px solid #eee;
