@@ -321,6 +321,7 @@ section p {
 .btn-phone svg {
     height: 18px;
     width: 18px;
+    flex-shrink: 0;
 }
 
 .btn-phone:hover {
@@ -333,9 +334,10 @@ section p {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.7rem 1.5rem;
+    padding: 0.65rem 1.4rem;
     background: #c41e3a;
     color: #fff;
+    border: 2px solid transparent;
     border-radius: 4px;
     text-decoration: none;
     font-size: 1rem;
@@ -348,8 +350,8 @@ section p {
 }
 
 .btn-doctolib svg {
-    height: 20px;
-    width: 20px;
+    height: 18px;
+    width: 18px;
     flex-shrink: 0;
 }
 
