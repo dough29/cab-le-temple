@@ -8,6 +8,10 @@ html, body {
     height: 100%;
 }
 
+html {
+    font-size: 18px;
+}
+
 body {
     font-family: "Segoe UI", Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.7;
@@ -80,6 +84,32 @@ section h2 {
 section p {
     font-size: 1.05rem;
     color: #555;
+}
+
+/* Listes soins / infos pratiques */
+.soins ul,
+.infos ul {
+    list-style: none;
+}
+
+.soins li,
+.infos li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 1.05rem;
+    color: #555;
+}
+
+.soins li:last-child,
+.infos li:last-child {
+    border-bottom: none;
+}
+
+.soins li strong {
+    display: block;
+    margin-bottom: 0.2rem;
+    color: #a3123a;
+    font-weight: 600;
 }
 
 /* Bouton Doctolib */
