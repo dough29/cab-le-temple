@@ -83,6 +83,16 @@ main {
     flex: 1 0 auto;
 }
 
+.tagline {
+    text-align: center;
+    color: #a3123a;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.1rem;
+    letter-spacing: 0.3px;
+    padding-top: 1.2rem;
+}
+
 /* Sections */
 section {
     padding: 0.7rem 0;
