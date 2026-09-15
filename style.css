@@ -27,7 +27,7 @@ header {
     background: #a3123a;
     color: #fff;
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 1.75rem 1rem;
 }
 
 header .brand {
@@ -44,10 +44,28 @@ header h1 {
 }
 
 .caduceus {
-    height: 5rem;
+    height: 7.5rem;
     width: auto;
     color: #fff;
     flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 0.9rem 1rem;
+    }
+
+    header .brand {
+        gap: 0.6rem;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .caduceus {
+        height: 4.75rem;
+    }
 }
 
 header p {
