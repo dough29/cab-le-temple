@@ -75,10 +75,23 @@ section:last-child {
 }
 
 section h2 {
-    font-size: 1.4rem;
-    font-weight: 600;
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 700;
     color: #a3123a;
-    margin-bottom: 0.8rem;
+    padding-bottom: 0.7rem;
+    margin-bottom: 1.4rem;
+}
+
+section h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+    background: #c41e3a;
 }
 
 section p {
@@ -86,13 +99,79 @@ section p {
     color: #555;
 }
 
-/* Listes soins / infos pratiques */
-.soins ul,
+.hero p {
+    margin-bottom: 0.6rem;
+    font-weight: 600;
+}
+
+.hero p:last-child {
+    margin-bottom: 0;
+}
+
+/* Tuiles soins infirmiers */
+.soins ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+}
+
+.soins li {
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 1.3rem 1.4rem;
+    font-size: 1rem;
+    color: #555;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.soins li:hover {
+    transform: translateY(-4px);
+    border-color: #a3123a;
+    box-shadow: 0 12px 24px rgba(163, 18, 58, 0.18), 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.soins li strong {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: #a3123a;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Apparition au scroll (dégrade proprement si non supporté) */
+@supports (animation-timeline: view()) {
+    .rdv-actions,
+    .hero p,
+    .soins li,
+    .infos li,
+    .contact p,
+    .contact .map {
+        opacity: 0;
+        animation: reveal-in linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 25%;
+    }
+
+    @keyframes reveal-in {
+        from {
+            opacity: 0;
+            translate: 0 24px;
+        }
+        to {
+            opacity: 1;
+            translate: 0 0;
+        }
+    }
+}
+
+/* Liste infos pratiques */
 .infos ul {
     list-style: none;
 }
 
-.soins li,
 .infos li {
     padding: 0.7rem 0;
     border-bottom: 1px solid #e8e8e8;
@@ -100,16 +179,8 @@ section p {
     color: #555;
 }
 
-.soins li:last-child,
 .infos li:last-child {
     border-bottom: none;
-}
-
-.soins li strong {
-    display: block;
-    margin-bottom: 0.2rem;
-    color: #a3123a;
-    font-weight: 600;
 }
 
 /* Actions de prise de rendez-vous */
