@@ -415,6 +415,19 @@ section p {
     text-decoration: underline;
 }
 
+.contact-line {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.contact-line svg {
+    height: 20px;
+    width: 20px;
+    flex-shrink: 0;
+    color: #a3123a;
+}
+
 .map {
     margin-top: 1.2rem;
     border-radius: 6px;
