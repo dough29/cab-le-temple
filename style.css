@@ -112,12 +112,46 @@ section p {
     font-weight: 600;
 }
 
+/* Actions de prise de rendez-vous */
+.rdv-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: 0.8rem;
+}
+
+/* Bouton téléphone */
+.btn-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    background: transparent;
+    color: #a3123a;
+    border: 2px solid #a3123a;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-phone svg {
+    height: 18px;
+    width: 18px;
+}
+
+.btn-phone:hover {
+    background: #a3123a;
+    color: #fff;
+}
+
 /* Bouton Doctolib */
-.rdv a {
+.btn-doctolib {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    margin-top: 0.8rem;
     padding: 0.7rem 1.5rem;
     background: #c41e3a;
     color: #fff;
@@ -128,7 +162,7 @@ section p {
     transition: background 0.2s;
 }
 
-.rdv a:hover {
+.btn-doctolib:hover {
     background: #971529;
 }
 
